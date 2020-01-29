@@ -9,9 +9,9 @@ router.get('/', function(req, res, next) {
 router.get('/products/:ref', function(req, res, next) {
   var ref = req.params.ref;
   const product = products.find(function(p) {
-    return p.ref = ref;
+    return p.ref == ref;
   });
   res.render("producto",{product});
 });
 
-module.exports = router;
+module.exports=router;
