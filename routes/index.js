@@ -18,4 +18,17 @@ router.get('/products/:ref', function(req, res, next) {
   }
 });
 
+var cesta = []; //provisional
+
+router.post("/comprar", function(req, res, next){
+  const ref = req.body.ref;
+  const product = products.find(function(p) {
+    return p.ref == ref;
+  });
+  //Añadimos producto a la cesta
+  cesta.push(product);
+  //Redirigimos a página de productos
+  res.redirect("/");
+});
+
 module.exports=router;
