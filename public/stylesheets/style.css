@@ -6,3 +6,6 @@ body {
 a {
   color: rgb(109, 189, 113), 182, 189);
 }
+img.product-photo{
+  width: 100%;
+}
