@@ -1,10 +1,11 @@
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 30px "Roskell";
 }
 
 a {
-  color: rgb(109, 189, 113), 182, 189);
+  color: rgb(109, 189, 113);
 }
 img.product-photo{
   width: 100%;
