@@ -1,3 +1,5 @@
+
+
 module.exports = [
     {ref:"A", nombre: "Hombre de hojalata", precio: 45, existencias: 10, imagen: "hojalata.jpg"},
     {ref:"B", nombre: "León cobarde", precio: 54, existencias: 1, imagen:"leon.jpg"},
