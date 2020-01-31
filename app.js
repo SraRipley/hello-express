@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
@@ -17,6 +18,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+//importamos un módulo de node 
+app.use(cookieSession({
+    name: 'campurriana',
+    keys: ['1 Ya no estamos','2 en Kansas'],
+    maxAge: 5 * 60 * 1000 //24 horas
+  
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
